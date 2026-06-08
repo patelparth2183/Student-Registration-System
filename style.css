@@ -1,0 +1,205 @@
+:root {
+    --primary: #2563eb;
+    --success: #22c55e;
+    --danger: #ef4444;
+    --background: #f8fafc;
+    --text: #94a3b8;
+    --heading: #1e293b;
+    --label: #374151;
+    --white: #ffffff;
+    --border: #e2e8f0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--heading);
+    font-weight: 700;
+}
+
+/* ---------- Header ---------- */
+.main-header {
+    background-color: var(--primary);
+    padding: 30px 0;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.main-header .icon-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-header .icon-box .box-icon {
+    font-size: 48px;
+    line-height: 48px;
+}
+
+.main-header .icon-box .box-content .main-title {
+    font-size: 32px;
+    line-height: 42px;
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.main-header .icon-box .box-content .description {
+    color: var(--white);
+}
+/* ---------- End of Header ---------- */
+
+
+/* ---------- Main Section ---------- */
+.main-section {
+    padding: 30px 0;
+}
+
+.row {
+    display: flex;
+    gap: 30px;
+}
+
+.row .col-4 {
+    width: 33.3333%;
+}
+
+.row .col-8 {
+    width: 66.6667%;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+
+.main-section .card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.main-section .card .card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.main-section .card .card-header .card-title {
+    display: flex;
+    gap: 10px;
+}
+
+.main-section .card .card-header .card-title .title-icon,
+.main-section .card .card-header .card-title .title-text {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.main-section .form-section .form-input {
+    margin-bottom: 30px;
+}
+
+.main-section .form-section .form-input label {
+    display: block;
+    color: var(--label);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.main-section .form-section .form-input input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--heading);
+    background: var(--background);
+    transition: all 0.2s;
+    outline: none;
+}
+
+.main-section .form-section .form-input input:focus {
+    border-color: var(--primary);
+}
+
+.main-section .form-section .btn-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 8px 15px;
+    flex-shrink: 0;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.btn.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn.btn-secondary {
+    background-color: var(--background);
+    color: var(--label);
+    border: 1px solid var(--border);
+}
+
+.main-section .form-section .btn-group .btn {
+    width: 50%;
+}
+
+.main-section .card .card-header .total-records {
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--primary);
+    background-color: var(--background);
+    border-radius: 50px;
+    border: 1px solid var(--border);
+}
+
+/* ---------- Table ---------- */
+.table-container .empty-record {
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.table-container .empty-record .empty-title {
+    font-weight: 600;
+}
+
+/* ---------- End of Table ---------- */
