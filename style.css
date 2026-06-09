@@ -8,6 +8,8 @@
     --label: #374151;
     --white: #ffffff;
     --border: #e2e8f0;
+    --primary-hover: #1d4ed8;
+    --secondary-hover: #e2e8f0;
 }
 
 *{
@@ -18,8 +20,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 22px;
     background-color: var(--background);
     color: var(--text);
     min-height: 100vh;
@@ -77,14 +79,57 @@ h6 {
 /* ---------- End of Header ---------- */
 
 
+/* ---------- Form Section ---------- */
+.form-section .form-input {
+    margin-bottom: 30px;
+}
+
+.form-section .form-input label {
+    display: block;
+    color: var(--label);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-section .form-input label .required {
+    color: var(--danger);
+}
+
+.form-section .form-input input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--heading);
+    background: var(--background);
+    transition: all 0.2s;
+    outline: none;
+}
+
+.form-section .form-input input:focus {
+    border-color: var(--primary);
+}
+
+.form-section .btn-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-section .btn-group .btn {
+    width: 50%;
+}
+/* ---------- Emad of Form Section ---------- */
+
+
 /* ---------- Main Section ---------- */
 .main-section {
-    padding: 30px 0;
+    padding: 30px 0 90px;
 }
 
 .row {
     display: flex;
-    gap: 30px;
+    gap: 24px;
 }
 
 .row .col-4 {
@@ -122,50 +167,104 @@ h6 {
     line-height: 26px;
 }
 
-.main-section .form-section .form-input {
-    margin-bottom: 30px;
+.main-section .card .card-header .total-records {
+    padding: 5px 12px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--primary);
+    background-color: var(--background);
+    border-radius: 50px;
+    border: 1px solid var(--border);
+}
+/* ---------- End of Main Section ---------- */
+
+
+/* ---------- Table ---------- */
+.table-container {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    overflow: auto;
 }
 
-.main-section .form-section .form-input label {
-    display: block;
-    color: var(--label);
+.table-container .student-table {
+    /* display: none; */
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table-container .student-table .table-head {
+    background-color: var(--background);
+    border-bottom: 2px solid var(--border);
+}
+
+.table-container .student-table .table-head th {
+    color: var(--primary);
+    text-transform: uppercase;
+    padding: 12px 15px;
+}
+
+.table-container .student-table .table-body td {
+    padding: 12px 15px;
+}
+
+.table-container .empty-record {
+    border-radius: 10px;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.table-container .empty-record .empty-title {
+    font-weight: 600;
+}
+
+/* ---------- Table Button ---------- */
+.edit-btn {
     font-size: 14px;
     line-height: 20px;
-    font-weight: 600;
-    margin-bottom: 5px;
+    padding: 5px 12px;
+    background-color: var(--background);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
 }
 
-.main-section .form-section .form-input input {
-    width: 100%;
-    padding: 10px 15px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
+.edit-btn:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.delete-btn {
     font-size: 14px;
-    color: var(--heading);
-    background: var(--background);
-    transition: all 0.2s;
-    outline: none;
+    line-height: 20px;
+    padding: 5px 12px;
+    background-color: rgba(239, 68, 68, 0.2);
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.main-section .form-section .form-input input:focus {
-    border-color: var(--primary);
+.delete-btn:hover {
+    background-color: var(--danger);
+    color: var(--white);
 }
+/* ---------- End of Table Button ---------- */
+/* ---------- End of Table ---------- */
 
-.main-section .form-section .btn-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 
+/* ---------- Button ---------- */
 .btn {
     border: none;
     padding: 8px 15px;
-    flex-shrink: 0;
     display: inline-block;
     border-radius: 8px;
-    font-size: 14px;
     line-height: 24px;
     font-weight: 600;
+    transition: all 0.3s linear;
+    cursor: pointer;
 }
 
 .btn.btn-primary {
@@ -179,39 +278,20 @@ h6 {
     border: 1px solid var(--border);
 }
 
-.main-section .form-section .btn-group .btn {
-    width: 50%;
+.btn.btn-primary:hover {
+    background-color: var(--primary-hover);
 }
 
-.main-section .card .card-header .total-records {
-    padding: 5px 12px;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 600;
-    color: var(--primary);
-    background-color: var(--background);
-    border-radius: 50px;
-    border: 1px solid var(--border);
+.btn.btn-secondary:hover {
+    background-color: var(--secondary-hover);
 }
-
-/* ---------- Table ---------- */
-.table-container .empty-record {
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.table-container .empty-record .empty-title {
-    font-weight: 600;
-}
-
-/* ---------- End of Table ---------- */
+/* ---------- End of Button ---------- */
 
 
 /* ---------- Footer ---------- */
 .footer {
     position: fixed;
+    z-index: 9;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -219,9 +299,48 @@ h6 {
     background-color: var(--white);
     border-top: 1px solid var(--border);
 }
-
-.footer .footer-text {
-    font-size: 14px;
-    line-height: 22px;
-}
 /* ---------- End of Footer ---------- */
+
+
+
+/* ---------- Responsive CSS ---------- */
+@media (max-width: 1024px) {
+    .dir-md-col {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .col-md-12 {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .main-header {
+        padding: 25px 0;
+    }
+
+    .main-header .icon-box {
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .main-header .icon-box .box-icon {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .main-header .icon-box .box-content .main-title {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .main-section .card {
+        padding: 25px;
+    }
+
+    .main-section .form-section .form-input {
+        margin-bottom: 20px;
+    }
+}
