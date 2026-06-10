@@ -81,7 +81,7 @@ h6 {
 
 /* ---------- Form Section ---------- */
 .form-section .form-input {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .form-section .form-input label {
@@ -119,6 +119,13 @@ h6 {
 .form-section .btn-group .btn {
     width: 50%;
 }
+
+.form-section .form-input .error-msg {
+    color: var(--danger);
+    margin-top: 5px;
+    display: inline-block;
+}
+
 /* ---------- Emad of Form Section ---------- */
 
 
@@ -179,33 +186,11 @@ h6 {
 /* ---------- End of Main Section ---------- */
 
 
-/* ---------- Table ---------- */
+/* ---------- Table Container ---------- */
 .table-container {
     border-radius: 10px;
     border: 1px solid var(--border);
     overflow: auto;
-}
-
-.table-container .student-table {
-    /* display: none; */
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-}
-
-.table-container .student-table .table-head {
-    background-color: var(--background);
-    border-bottom: 2px solid var(--border);
-}
-
-.table-container .student-table .table-head th {
-    color: var(--primary);
-    text-transform: uppercase;
-    padding: 12px 15px;
-}
-
-.table-container .student-table .table-body td {
-    padding: 12px 15px;
 }
 
 .table-container .empty-record {
@@ -217,8 +202,51 @@ h6 {
 .table-container .empty-record .empty-title {
     font-weight: 600;
 }
+/* ---------- End of Table Container ---------- */
+
+
+/* ---------- Table ---------- */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.student-table .table-head {
+    background-color: var(--background);
+    border-bottom: 2px solid var(--border);
+}
+
+.student-table .table-head th {
+    color: var(--primary);
+    text-transform: uppercase;
+    padding: 12px 15px;
+}
+
+.student-table .table-body td {
+    padding: 12px 15px;
+    color: var(--heading);
+}
+
+.student-table .table-body tr {
+    border-bottom: 1px solid var(--border);
+}
+
+.student-table .table-body tr:last-child {
+    border-bottom: 0;
+}
+
+.student-table .table-body tr:hover {
+    background-color: var(--background);
+}
 
 /* ---------- Table Button ---------- */
+td:has(.edit-btn, .delete-btn) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
 .edit-btn {
     font-size: 14px;
     line-height: 20px;
@@ -226,8 +254,7 @@ h6 {
     background-color: var(--background);
     color: var(--primary);
     border: 1px solid var(--primary);
-    border-radius: 5px;
-    margin-right: 5px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -243,7 +270,7 @@ h6 {
     background-color: rgba(239, 68, 68, 0.2);
     color: var(--danger);
     border: 1px solid var(--danger);
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
