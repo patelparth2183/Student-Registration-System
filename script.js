@@ -185,17 +185,19 @@ function editStudent(index) {
     submitBtn.textContent = "✓ Update Student";
 }
 
+// To remove previous validation error
+resetBtn.addEventListener("click", clearErrors);
+
 // Dynamic scrollbar
 function toggleScrollbar() {
 
-    const tableContainer =
-        document.getElementById("tableContainer");
+    const tableContainer = document.getElementById("tableContainer");
 
     if (students.length > 5) {
         tableContainer.style.maxHeight = "422px";
         tableContainer.style.overflowY = "auto";
 
     } else {
-        tableContainer.style.overflowY = "visible";
+        tableContainer.style.overflowY = "hidden";
     }
 }
